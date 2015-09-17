@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <map>
+
 
 
 using namespace std;
@@ -12,8 +14,9 @@ public:
   ~RomanNumeral(){};
   string GetRomanSymbol(int number);
   
-private:
+  private:
     vector <string> romanVec;
+    map <int , string > romanMap;
 };
 
 RomanNumeral::RomanNumeral()
@@ -23,13 +26,20 @@ RomanNumeral::RomanNumeral()
   romanVec.push_back("X");
 }
 
-
 string RomanNumeral::GetRomanSymbol(int number)
 {
-  if (number == 1)
-    return romanVec.at(0);
-  else if (number == 5)
-    return romanVec.at(1);
-  else 
-    return romanVec.at(2);
+  string roman = "";
+    while ( number > 0 ) {
+      if ( number > 10) {
+         roman += "X";
+         number -= 10;
+       }
+      if (number > 5) {
+        roman += "V";
+        number -= 5;
+      }
+      if (number > 1 ) {
+       roman += "I";
+       number -= 1;
+    }
 }
