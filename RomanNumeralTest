@@ -37,5 +37,20 @@ TEST_F(RomanNumeralTest, Test18)
 
 TEST_F(RomanNumeralTest, Test37)
 {
-EXPECT_EQ(objRoman.GetRomanSymbol(37), "XXXVII");
+  EXPECT_EQ(objRoman.GetRomanSymbol(37), "XXXVII");
+}
+
+TEST_F(RomanNumeralTest, Test4)
+{
+  EXPECT_EQ(objRoman.GetRomanSymbol(4), "IV");
+}
+
+TEST_F(RomanNumeralTest, Test19)
+{
+  EXPECT_EQ(objRoman.GetRomanSymbol(4), "XIX");
+}
+
+TEST_F(RomanNumeralTest, Test40)
+{
+  EXPECT_EQ(objRoman.GetRomanSymbol(40), "XL");
 }
