@@ -54,3 +54,50 @@ TEST_F(RomanNumeralTest, Test40)
 {
   EXPECT_EQ(objRoman.GetRomanSymbol(40), "XL");
 }
+
+
+TEST_F(RomanNumeralTest, Test88)
+{
+  EXPECT_EQ(objRoman.GetRomanSymbol(88), "LXXXVIII");
+}
+
+TEST_F(RomanNumeralTest, Test90)
+{
+  EXPECT_EQ(objRoman.GetRomanSymbol(90), "XC");
+}
+
+TEST_F(RomanNumeralTest, Test128)
+{
+  EXPECT_EQ(objRoman.GetRomanSymbol(128), "CXXVIII");
+}
+
+TEST_F(RomanNumeralTest, Test500)
+{
+  EXPECT_EQ(objRoman.GetRomanSymbol(500), "D");
+}
+
+TEST_F(RomanNumeralTest, Test300)
+{
+  EXPECT_EQ(objRoman.GetRomanSymbol(300), "CCC");
+}
+
+TEST_F(RomanNumeralTest, Test400)
+{
+  EXPECT_EQ(objRoman.GetRomanSymbol(400), "CD");
+}
+
+
+TEST_F(RomanNumeralTest, Test1000)
+{
+  EXPECT_EQ(objRoman.GetRomanSymbol(1000), "M");
+}
+
+TEST_F(RomanNumeralTest, Test900)
+{
+  EXPECT_EQ(objRoman.GetRomanSymbol(900), "CM");
+}
+
+TEST_F(RomanNumeralTest, Test2865)
+{
+  EXPECT_EQ(objRoman.GetRomanSymbol(2865), "MMDCCCLXV");
+}
