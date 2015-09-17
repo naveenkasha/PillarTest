@@ -1,0 +1,28 @@
+#include <gtest/gtest.h>
+
+
+class RomanNumeralTest : public ::testing::Test
+{
+  public:
+    void SetUp(){};
+    void TearDown(){};
+    
+    RomanNumeralTest(){};
+    ~RomanNumeralTest(){};
+    
+}
+
+TEST(RomanNumeralTest , FirstTest)
+{
+  EXPECT_EQ(RomanNumeralTest(1), "I");
+}
+
+TEST(RomanNumeralTest, SecondTest)
+{
+  EXPECT_EQ(RomanNumeralTest(5), "V");
+}
+
+TEST(RomanNumeralTest, ThirdTest)
+{
+  EXPECT_EQ(RomanNumeralTest(10), "X");
+}
