@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 
 using namespace std;
@@ -7,18 +8,28 @@ using namespace std;
 class RomanNumeral
 {
 public:
-  RomanNumeral(){};
+  RomanNumeral();
   ~RomanNumeral(){};
   string GetRomanSymbol(int number);
+  
+private:
+    vector <string> romanVec;
 };
 
+RomanNumeral::RomanNumeral()
+{
+  romanVec.push_back("I");
+  romanVec.push_back("V");
+  romanVec.push_back("X");
+}
 
-string RomanNumer::GetRomanSymbol(int number)
+
+string RomanNumeral::GetRomanSymbol(int number)
 {
   if (number == 1)
-    return "I";
+    return romanVec.at(0);
   else if (number == 5)
-    return "V";
+    return romanVec.at(1);
   else 
-    return "X";
+    return romanVec.at(2);
 }
