@@ -47,7 +47,7 @@ TEST_F(RomanNumeralTest, Test4)
 
 TEST_F(RomanNumeralTest, Test19)
 {
-  EXPECT_EQ(objRoman.GetRomanSymbol(4), "XIX");
+  EXPECT_EQ(objRoman.GetRomanSymbol(19), "XIX");
 }
 
 TEST_F(RomanNumeralTest, Test40)
