@@ -21,9 +21,10 @@ public:
 
 RomanNumeral::RomanNumeral()
 {
-  romanVec.push_back("I");
-  romanVec.push_back("V");
-  romanVec.push_back("X");
+  romanMap.insert(std::pair<int, string>(1, "I"));
+  romanMap.insert(std::pair<int, string>(5, "V"));
+  romanMap.insert(std::pair<int, string>(10, "X"));
+  romanMap.insert(std::pair<int, string>(50, "L"));
 }
 
 string RomanNumeral::GetRomanSymbol(int number)
@@ -31,15 +32,15 @@ string RomanNumeral::GetRomanSymbol(int number)
   string roman = "";
     while ( number > 0 ) {
       if ( number > 10) {
-         roman += "X";
+         roman += romanMap.at(10);
          number -= 10;
        }
       if (number > 5) {
-        roman += "V";
+        roman += romanMap.at(5);
         number -= 5;
       }
       if (number > 1 ) {
-       roman += "I";
+       roman += romanMap.at(1);
        number -= 1;
     }
 }
